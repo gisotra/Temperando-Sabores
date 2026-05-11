@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Nome do Seu App</string>
+
+    <string-array name="filtros">
+        <item>Sem Filtro</item>
+        <item>Preto e Branco</item>
+        <item>Sépia</item>
+        <item>Inverter Cores</item>
+        <item>Desfoque (Blur)</item>
+    </string-array>
+
+</resources>
