@@ -13,6 +13,10 @@ import androidx.core.view.WindowInsetsCompat
 import com.jenifferleme.temperando_sabores.databinding.ActivityMainBinding
 import com.jenifferleme.temperando_sabores.tool.CameraHelper
 import android.Manifest
+import android.view.View
+import android.widget.AdapterView
+import com.jenifferleme.temperando_sabores.filters.FiltroFactory
+import com.jenifferleme.temperando_sabores.filters.TipoFiltro
 
 class MainActivity : AppCompatActivity(), CameraHelper.Callback {
     private lateinit var binding : ActivityMainBinding
@@ -27,6 +31,19 @@ class MainActivity : AppCompatActivity(), CameraHelper.Callback {
         binding.btnCapture.setOnClickListener {
             tirarFoto()
         }
+        binding.spinnerFiltros.onItemSelectedListener =
+            object : AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(
+                    parent: AdapterView<*>,
+                    view: View?,
+                    position: Int,
+                    id: Long
+                ) {
+                    val tipoFiltro = TipoFiltro.entries.getOrNull(position)
+                    aplicarFiltro(tipoFiltro)
+                }
+                override fun onNothingSelected(parent: AdapterView<*>) { }
+            }
     }
     private fun tirarFoto() {
         if (ContextCompat.checkSelfPermission(this,
@@ -40,6 +57,16 @@ class MainActivity : AppCompatActivity(), CameraHelper.Callback {
                 arrayOf(Manifest.permission.CAMERA),
                 REQUEST_CAMERA_CODE
             )
+        }
+    }
+    private fun aplicarFiltro(tipo: TipoFiltro?) {
+        if (!::originalBitmap.isInitialized) return
+        tipo?.let {
+            runOnUiThread {
+                val bitmap = FiltroFactory.criar(tipo)
+                    .aplicar(originalBitmap)
+                binding.imageView.setImageBitmap(bitmap)
+            }
         }
     }
     override fun onFotoRecebida(bitmap: Bitmap) {
