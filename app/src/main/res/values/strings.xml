@@ -1,12 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Nome do Seu App</string>
+    <string name="app_name">Your App Name</string>
 
     <string-array name="filtros">
-        <item>Sem Filtro</item>
-        <item>Preto e Branco</item>
-        <item>Sépia</item>
-        <item>Inverter Cores</item>
-        <item>Desfoque (Blur)</item>
+        <item>No Filter</item>
+        <item>Black and White</item>
+        <item>Sepia</item>
+        <item>Invert Colors</item>
+        <item>Blur</item>
     </string-array>
-
 </resources>
