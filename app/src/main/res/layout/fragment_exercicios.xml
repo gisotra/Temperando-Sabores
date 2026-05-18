@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+    <TextView
+        android:id="@+id/txtFrase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="The cat is on the table"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
+    <Button
+        android:id="@+id/btnFalar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FALAR"
+        android:layout_marginBottom="16dp" />
+    <TextView
+        android:id="@+id/txtTextoReconhecido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Texto reconhecido aparecerá aqui:"
+        android:textSize="16sp"
+        android:layout_marginBottom="24dp" />
+    <TextView
+        android:id="@+id/txtFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Feedback"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:textColor="#2E7D32" />
+</LinearLayout>

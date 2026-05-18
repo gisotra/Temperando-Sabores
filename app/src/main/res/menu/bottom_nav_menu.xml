@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_exercicios"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:iconTint="#FFFFFF"
+        android:title="Exercícios" />
+    <item
+        android:id="@+id/nav_gravacoes"
+        android:icon="@android:drawable/ic_btn_speak_now"
+        android:iconTint="#FFFFFF"
+        android:title="Gravações" />
+</menu>

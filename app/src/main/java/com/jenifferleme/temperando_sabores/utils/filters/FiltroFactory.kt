@@ -1,6 +1,6 @@
-package com.jenifferleme.temperando_sabores.filters
+package com.jenifferleme.temperando_sabores.utils.filters
 
-import com.jenifferleme.temperando_sabores.model.Filtro
+import com.jenifferleme.temperando_sabores.data.local.model.Filtro
 
 enum class TipoFiltro {
     SEM_FILTRO, PRETO_BRANCO, SEPIA, INVERTER, BLUR

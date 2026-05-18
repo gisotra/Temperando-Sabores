@@ -1,8 +1,8 @@
-package com.jenifferleme.temperando_sabores.filters
+package com.jenifferleme.temperando_sabores.utils.filters
 
 import android.graphics.Bitmap
 import android.graphics.Color
-import com.jenifferleme.temperando_sabores.model.Filtro
+import com.jenifferleme.temperando_sabores.data.local.model.Filtro
 
 class FiltroBlur : Filtro() {
     override fun aplicar(bitmap: Bitmap): Bitmap {

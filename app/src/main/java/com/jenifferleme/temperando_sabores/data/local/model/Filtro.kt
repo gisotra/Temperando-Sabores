@@ -1,4 +1,4 @@
-package com.jenifferleme.temperando_sabores.model
+package com.jenifferleme.temperando_sabores.data.local.model
 
 import android.graphics.Bitmap
 

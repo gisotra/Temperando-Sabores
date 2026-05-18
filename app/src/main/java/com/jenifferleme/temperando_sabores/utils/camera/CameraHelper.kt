@@ -1,4 +1,4 @@
-package com.jenifferleme.temperando_sabores.tool
+package com.jenifferleme.temperando_sabores.utils.camera
 
 import android.app.Activity
 import android.content.Intent
