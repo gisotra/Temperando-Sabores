@@ -1,125 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.tools"
-    xmlns:tools2="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <ImageView
-        android:id="@+id/img_background"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/menufundo"
-        app:layout_bottom_toBottomOf="parent"
-        app:layout_end_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_top_toTopOf="parent"
-        tools:ignore="ContentDescription" />
-
-    <TextView
-        android:id="@+id/txt_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="52dp"
-        android:layout_marginStart="52dp"
-        android:text="Temperando Sabores"
-        android:textColor="@android:color/white"
-        android:textSize="32sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_end_toEndOf="parent"
-        app:layout_top_toTopOf="parent"
-        tools2:layout_editor_absoluteY="62dp" />
-
-    <TextView
-        android:id="@+id/txt_slogan"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Amplie seus conhecimentos
-         culinários!"
-        android:textColor="@android:color/white"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_end_toEndOf="parent"
-        app:layout_top_toBottomOf="@id/txt_title"
-        tools2:layout_editor_absoluteY="140dp" />
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@android:color/white">
 
     <LinearLayout
-        android:id="@+id/card_login_container"
         android:layout_width="match_parent"
-        android:layout_height="390dp"
-        android:background="@drawable/bg_bottom_card"
-        android:elevation="8dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
-        android:orientation="vertical"
-        android:gravity="center_horizontal"
-        android:paddingStart="24dp"
-        android:paddingTop="32dp"
-        android:paddingEnd="24dp"
-        android:paddingBottom="24dp"
-        app:layout_bottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_end_toEndOf="parent"
-        tools2:layout_editor_absoluteY="350dp">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/txt_login_header"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Fazer Login"
-            android:textColor="@android:color/black"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            tools:parentTag="android.widget.LinearLayout">
+
+            <ImageView
+                android:id="@+id/img_banner_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/menufundo"
+                android:foreground="#80000000"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_end_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_main_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Bem-vindo ao\nTemperando Sabores"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginHorizontal="32dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/txt_main_subtitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_end_toEndOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:id="@+id/txt_main_subtitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Encontre receitas incríveis para todas as ocasiões!"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginHorizontal="32dp"
+                app:layout_constraintTop_toBottomOf="@id/txt_main_title"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_end_toEndOf="parent"
+                android:layout_marginBottom="32dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_layout_nome"
+            android:id="@+id/input_layout_busca"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:hint="Nome">
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="-28dp"
+            android:hint="Buscar por título..."
+            app:hintTextColor="@color/coral_primary"
+            app:boxStrokeColor="@color/coral_primary"
+            app:boxCornerRadiusTopStart="28dp"
+            app:boxCornerRadiusTopEnd="28dp"
+            app:boxCornerRadiusBottomStart="28dp"
+            app:boxCornerRadiusBottomEnd="28dp"
+            app:endIconMode="custom"
+            app:endIconDrawable="@android:drawable/ic_menu_search"
+            app:endIconTint="@color/coral_primary"
+            android:elevation="4dp"
+            android:background="@android:color/white">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edt_nome"
+                android:id="@+id/edt_busca"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:textColor="@android:color/black" />
+                android:inputType="text"
+                android:textColor="@color/text_dark" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/input_layout_senha"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:hint="Senha"
-            app:endIconMode="password_toggle"> <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edt_senha"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:textColor="@android:color/black" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_entrar"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:backgroundTint="@color/cardview_shadow_start_color"
-            android:text="Entrar"
-            android:textColor="@android:color/black"
-            android:textStyle="bold" />
+            android:text="Receitas em Destaque"
+            android:textColor="@color/coral_primary"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="12dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_receitas_destaque"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingStart="20dp"
+            android:paddingEnd="8dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_card_receita"
+            tools:itemCount="3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Explore Categorias"
+            android:textColor="@color/coral_primary"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="36dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Veja as categorias mais acessadas pelos usuários."
+            android:textColor="@color/text_muted"
+            android:textSize="14sp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="16dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_categorias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingStart="20dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="32dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_card_categoria"
+            tools:itemCount="3" />
 
     </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
