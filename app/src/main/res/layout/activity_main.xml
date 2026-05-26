@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/tempsabor"
+        android:src="@drawable/menufundo"
         app:layout_bottom_toBottomOf="parent"
         app:layout_end_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,6 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="52dp"
+        android:layout_marginStart="52dp"
         android:text="Temperando Sabores"
         android:textColor="@android:color/white"
         android:textSize="32sp"
@@ -31,29 +32,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_end_toEndOf="parent"
         app:layout_top_toTopOf="parent"
-        tools2:layout_editor_absoluteY="152dp" />
+        tools2:layout_editor_absoluteY="62dp" />
 
     <TextView
         android:id="@+id/txt_slogan"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Desbloqueie as melhores receitas locais!"
+        android:text="Amplie seus conhecimentos
+         culinários!"
         android:textColor="@android:color/white"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_end_toEndOf="parent"
         app:layout_top_toBottomOf="@id/txt_title"
-        tools2:layout_editor_absoluteY="265dp" />
+        tools2:layout_editor_absoluteY="140dp" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:id="@+id/card_login_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
+        android:layout_height="390dp"
         android:background="@drawable/bg_bottom_card"
         android:elevation="8dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
         android:paddingStart="24dp"
         android:paddingTop="32dp"
         android:paddingEnd="24dp"
@@ -61,78 +66,60 @@
         app:layout_bottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_end_toEndOf="parent"
-        tools2:layout_editor_absoluteY="629dp">
+        tools2:layout_editor_absoluteY="350dp">
 
         <TextView
-            android:id="@+id/txt_card_title"
-            android:layout_width="0dp"
+            android:id="@+id/txt_login_header"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Economize mais com Preços de Membro"
+            android:text="Fazer Login"
             android:textColor="@android:color/black"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_end_toEndOf="parent"
-            app:layout_top_toTopOf="parent" />
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/txt_card_subtitle"
-            android:layout_width="0dp"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_nome"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:gravity="center"
-            android:text="Desbloqueie mais vantagens — Basta entrar!"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_end_toEndOf="parent"
-            app:layout_top_toBottomOf="@id/txt_card_title" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_google"
-            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-            android:layout_width="0dp"
-            android:layout_height="56dp"
             android:layout_marginTop="24dp"
-            android:backgroundTint="#F2F2F7"
-            android:text="Continuar com o Google"
-            android:textColor="@android:color/black"
-            app:cornerRadius="28dp"
-            app:icon="@android:drawable/ic_menu_compass"
-            app:iconGravity="textStart"
-            app:iconTint="@android:color/black"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_end_toEndOf="parent"
-            app:layout_top_toBottomOf="@id/txt_card_subtitle" />
+            android:hint="Nome">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_nome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_senha"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Senha"
+            app:endIconMode="password_toggle"> <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_senha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:textColor="@android:color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_email"
-            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-            android:layout_width="0dp"
-            android:layout_height="56dp"
-            android:layout_marginTop="12dp"
-            android:backgroundTint="#F2F2F7"
-            android:text="Continuar com Email"
-            android:textColor="@android:color/black"
-            app:cornerRadius="28dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_end_toEndOf="parent"
-            app:layout_top_toBottomOf="@id/btn_google" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_skip"
+            android:id="@+id/btn_entrar"
             style="@style/Widget.MaterialComponents.Button.TextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Pular"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/cardview_shadow_start_color"
+            android:text="Entrar"
             android:textColor="@android:color/black"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_end_toEndOf="parent"
-            app:layout_top_toBottomOf="@id/btn_email" />
+            android:textStyle="bold" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
