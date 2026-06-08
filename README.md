@@ -1,5 +1,9 @@
 # 🍳 Temperando Sabores
 
+## 👥 Integrantes:  
+Jennifer Leme
+Giovane Sotratto
+
 ## 📱 Proposta do Projeto
 O **Temperando Sabores** é um assistente de cozinha inteligente desenvolvido para Android. 
 O foco do aplicativo é permitir que chefs e entusiastas da culinária interajam com suas receitas sem precisar tocar constantemente na tela do celular, utilizando sensores de movimento e voz, além de registrar suas próprias criações.
