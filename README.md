@@ -1,8 +1,8 @@
 # 🍳 Temperando Sabores
 
 ## 👥 Integrantes:  
-Jennifer Leme
-Giovane Sotratto
+Jennifer Leme.
+Giovane Sotratto.
 
 ## 📱 Proposta do Projeto
 O **Temperando Sabores** é um assistente de cozinha inteligente desenvolvido para Android. 
